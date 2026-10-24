@@ -1,0 +1,45 @@
+{
+  "extends": "config/base.json",
+  "description": "Nhánh B — hồi quy tỷ suất biến động. Dùng chung bộ đặc trưng với nhánh A.",
+  "dataset": {
+    "path": "data/input/VNM.csv",
+    "label": "VNM",
+    "key_column": "Date",
+    "numeric_columns": [
+      "Open",
+      "High",
+      "Low",
+      "Close",
+      "Volume"
+    ],
+    "series": {
+      "open": "Open",
+      "high": "High",
+      "low": "Low",
+      "close": "Close",
+      "volume": "Volume"
+    }
+  },
+  "labeling": {
+    "task": "regression",
+    "source_series": "close",
+    "horizon": 5,
+    "target": "future_return"
+  },
+  "model": {
+    "n_estimators": 300,
+    "criterion": "variance",
+    "max_depth": 6,
+    "min_samples_split": 2,
+    "min_samples_leaf": 30,
+    "max_features": "third",
+    "max_thresholds": 48,
+    "bootstrap": true,
+    "random_state": 42,
+    "verbose": 50
+  },
+  "output": {
+    "figure_dir": "data/output",
+    "prefix": "VNM_regression"
+  }
+}
