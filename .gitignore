@@ -1,0 +1,68 @@
+# ── Môi trường phát triển ───────────────────────────────────────────
+.vscode/
+.cursor/
+.claude/
+
+# ── Môi trường Python ───────────────────────────────────────────────
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache
+.ipynb_checkpoints/
+.env
+
+# ── Dữ liệu và kết quả ──────────────────────────────────────────────
+# Dữ liệu thô không commit: dung lượng lớn, tải lại được từ nguồn.
+data/input/*
+!data/input/.gitkeep
+
+# Đồ thị và bảng kết quả sinh ra khi chạy, không commit.
+data/output/*
+!data/output/.gitkeep
+
+# Gói mô hình sinh ra khi huấn luyện — tái tạo được bằng --save-model.
+models/*
+!models/.gitkeep
+
+# --- normalized ---
+.env
+.env.*
+!.env.example
+!.env.*.example
+.supabase_access_token
+.gitconfig
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+target/
+bin/
+build/
+dist/
+out/
+.dart_tool/
+.pub-cache/
+.flutter-plugins
+.flutter-plugins-dependencies
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+.pytest_cache/
+.coverage
+coverage/
+.next/
+.nuxt/
+*.log
+.msversion/
+.agents/
+.claude/
+.cursor/
+.private/
+*.dll
+*.exe
+*.class
+vendor/
